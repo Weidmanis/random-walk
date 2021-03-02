@@ -6,7 +6,7 @@ import matplotlib.animation as animation
 
 def get_y(y, y_):
 
-    for i in range(1000):
+    for i in range(10000):
         e = random.choice([-1,1])
         y += e
         y_.append(y)
