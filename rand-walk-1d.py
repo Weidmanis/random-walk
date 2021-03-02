@@ -1,6 +1,5 @@
 import random
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 # y(t) = y(t-1) + e, where e = random int,
 

@@ -1,23 +1,23 @@
 import turtle
 import random
 
-turtle.speed('slowest')
+turtle.speed('normal')
 
 def random_walk(N):
-
-    
 
     # Create two lists for x, y coordinates
     walkx, walky = [0], [0]
 
     for i in range(1 , N+1):
 
+        # Choice of a step at random
         r = random.randint(0,8)
         
+        # Possible steps
         steps = [
-            [-10,-10],[-10,0],[-10,10],
-            [0,-10], [0 ,0],[0,10],
-            [10,-10], [10,0], [10,10],
+            [-1,-1],[-1,0],[-1,1],
+            [0,-1], [0 ,0],[0,1],
+            [1,-1], [1,0], [1,1],
         ]
         
         walkx.append(walkx[i-1] + (steps[r][0]))
@@ -26,7 +26,6 @@ def random_walk(N):
     return [walkx, walky]
 
 walk = random_walk(15000)
-print(walk)
-for x,y in zip(*walk):
-    turtle.goto(x*1, y*1)
 
+for x,y in zip(*walk):
+    turtle.goto(x*10, y*10) # *10 = 10px
