@@ -36,14 +36,9 @@ res = rand_walk(10000)
 # plot
 fig = plt.figure()
 ax = fig.add_subplot(111, projection = '3d')
+# ax.grid(False)
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_zlabel('Z-axis')
-ax.plot3D(res[0], res[1], res[2], 'red', alpha = 0.6)
+ax.plot3D(res[0], res[1], res[2], 'red', alpha = 0.7)
 plt.show()
-
-
-
-
-
-    
