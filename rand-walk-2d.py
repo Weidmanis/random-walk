@@ -13,15 +13,13 @@ def random_walk(N):
         # Choice of a step at random
         r = random.randint(0,8)
         
-        # Possible steps
-        steps = [
+        [x, y] = random.choice([
             [-1,-1],[-1,0],[-1,1],
             [0,-1], [0 ,0],[0,1],
-            [1,-1], [1,0], [1,1],
-        ]
-        
-        walkx.append(walkx[i-1] + (steps[r][0]))
-        walky.append(walky[i-1] +(steps[r][1]))
+            [1,-1], [1,0], [1,1],])
+
+        walkx.append(walkx[i-1] + x)
+        walky.append(walky[i-1] + y)
 
     return [walkx, walky]
 
